@@ -65,7 +65,7 @@ $mainquotes = getRandomQuote($quotes);
 
 
 $quotedisplay = '';
-$quotedisplay =   '<p class="quote">' . $mainquotes ['quote'] . '</p>';
+$quotedisplay .=   '<p class="quote">' . $mainquotes ['quote'] . '</p>';
 $quotedisplay .= '<p class="source">' . $mainquotes ['source'] .
 
 
@@ -73,7 +73,7 @@ $quotedisplay .= '<p class="source">' . $mainquotes ['source'] .
 '<span class="year">' . $mainquotes ['year'] .  '</span> </p>';
 
 if ($mainquotes ['citation'] && ['year'] == Null) {
-  $quotedisplay =   '<p class="quote">' . $mainquotes ['quote'] .
+  $quotedisplay .=   '<p class="quote">' . $mainquotes ['quote'] .
   $quotedisplay .=  '<p class="source">' . $mainquotes ['source'] . '</p>';
 
 }
