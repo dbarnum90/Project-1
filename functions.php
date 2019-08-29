@@ -1,7 +1,7 @@
 <?php
 // PHP - Random Quote Generator
 $quotes = [];
-// Create the Multidimensional array of quote elements and name it quotes
+// Multidimensional Array built to hold quotes and source.
 $quotes[] = [
      'quote' => 'Life is a wheel of fortune and its my turn to spin it.',
      'source' => 'Tupac Shakur',
@@ -12,7 +12,7 @@ $quotes[] = [
 $quotes[] = [
      'quote' => "You see my tears, in the rain underneath it all, we’re just the same.",
      'source' => 'MGK',
-     'citation' => '', 
+     'citation' => '',
      'year' => '',
 
 ];
@@ -46,19 +46,19 @@ $quotes[] = [
 ];
 
 
-// Create the getRandomQuuote function and name it getRandomQuote
+// getRandomQuote function to have quotes rotate in random order.
 function getRandomQuote($quotes){
 
 
 global $quotes;
-
+// return function to return values of the array.
 return $quotes [array_rand($quotes)];
 };
 
 
 
 
-
+// printQuote function to output strings of the array.
 function printQuote($mainquotes) {
 global $quotes;
 $mainquotes = getRandomQuote($quotes);
@@ -77,7 +77,7 @@ if ($mainquotes ['citation'] && ['year'] == Null) {
   $quotedisplay .=  '<p class="source">' . $mainquotes ['source'] . '</p>';
 
 }
-
+// echo used to call out and display quotes.
 echo $quotedisplay;
 
 }
